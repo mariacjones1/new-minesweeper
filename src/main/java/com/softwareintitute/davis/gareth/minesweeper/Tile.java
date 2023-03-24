@@ -38,7 +38,7 @@ public class Tile {
     public void setNumberOfNeighbouringMines(int numberOfNeighbouringMines) {
         this.numberOfNeighbouringMines = numberOfNeighbouringMines;
     }
-     public void increaseNeighbour(){
+    public void increaseNeighbour(){
         numberOfNeighbouringMines++;
      }
     public boolean isRevealed() {

@@ -15,12 +15,12 @@ public class MinesweeperGrid {
         this.width = width;
         this.numberOfMines = numberOfMines;
         board = new Tile[this.length][this.width];
-        initaliseTiles();
+        initialiseTiles();
         placeMines();
         calculateNeighbours();
     }
 
-    private void initaliseTiles() {
+    private void initialiseTiles() {
         for (int i = 0; i < this.length; i++) {
             for (int j = 0; j < this.width; j++) {
                 board[i][j] = new Tile();
@@ -53,7 +53,7 @@ public class MinesweeperGrid {
                         if(x<0||y<0||x>=length||y>=width){//checks to see if the tile is out of bounds and we only count when in bounds
 
                         }
-                        else if(x==i&&y==j){//we dont want to count the center square
+                        else if(x==i&&y==j){//we don't want to count the center square
 
                         }
                         else{
@@ -88,8 +88,9 @@ public class MinesweeperGrid {
         return this.toString();
     }
 
-    public void setFlag(){
-        //todo
+    public String setFlag(int xCord, int yCord){
+        board[xCord][yCord].flagTile();
+        return this.toString();
     }
 
     public void winGame(){
