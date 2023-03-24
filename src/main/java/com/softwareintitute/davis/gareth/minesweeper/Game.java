@@ -1,18 +1,13 @@
 package com.softwareintitute.davis.gareth.minesweeper;
 
+import java.util.Scanner;
+
 public class Game {
 
 
 
 
-
-
-
-
-
-
-
-    public void takeTurn(int xCord, int YCord){
+    public void takeTurn(){
 
     }
 }

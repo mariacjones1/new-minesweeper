@@ -9,6 +9,9 @@ public class MinesweeperGrid {
     private int length;
     private Tile[][] board;
     private int numberOfMines;
+    private int numberOfRevealedSquares = 0;
+    public boolean runGame = true;
+    public boolean winner;
 
     public MinesweeperGrid(int length,int width, int numberOfMines){
         this.length = length;
@@ -82,8 +85,11 @@ public class MinesweeperGrid {
 
     public String revealSquare(int xCord, int yCord){
         board[xCord][yCord].revealTile();
+        numberOfRevealedSquares++;
         if(board[xCord][yCord].isABomb()){
             gameOver();
+        } else if (numberOfRevealedSquares == ((length * width) - numberOfMines)) {
+            winGame();
         }
         return this.toString();
     }
@@ -93,8 +99,10 @@ public class MinesweeperGrid {
         return this.toString();
     }
 
-    public void winGame(){
-        //todo
+    public String winGame(){
+        runGame = false;
+        winner = true;
+        return this.toString();
     }
 
     public String gameOver(){
@@ -103,6 +111,8 @@ public class MinesweeperGrid {
                 board[i][j].revealTile();
             }
         }
+        runGame = false;
+        winner = false;
         return this.toString();
     }
 }
