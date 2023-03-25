@@ -41,11 +41,18 @@ public class Game {
             xCord = scanner.nextInt();
             System.out.println("Please enter Y coordinate:");
             yCord = scanner.nextInt();
-            if (selection.equals("R")) {
-                System.out.println(myGrid.revealSquare(xCord, yCord));
-            } else if (selection.equals("F")) {
-                System.out.println(myGrid.setFlag(xCord, yCord));
+            if (selection.equals("R") || selection.equals("F")){
+                if (xCord < 0 || xCord >= length || yCord < 0 || yCord >= width){
+                    System.out.println("Coordinate out of bounds, please try again.");
+                } else if (selection.equals("R")) {
+                    System.out.println(myGrid.revealSquare(xCord, yCord));
+                } else if (selection.equals("F")) {
+                    System.out.println(myGrid.setFlag(xCord, yCord));
+                }
+            } else {
+                System.out.println("Invalid selection, please try again.");
             }
+
         }
         if (myGrid.winner == true) {
             winner = true;
