@@ -35,27 +35,27 @@ public class Tile {
         isABomb = ABomb;
     }
 
-    public void setNumberOfNeighbouringMines(int numberOfNeighbouringMines) {
-        this.numberOfNeighbouringMines = numberOfNeighbouringMines;
-    }
+//    public void setNumberOfNeighbouringMines(int numberOfNeighbouringMines) {
+//        this.numberOfNeighbouringMines = numberOfNeighbouringMines;
+//    }
     public void increaseNeighbour(){
         numberOfNeighbouringMines++;
      }
-    public boolean isRevealed() {
-        return isRevealed;
-    }
-
-    public boolean isFlagged() {
-        return isFlagged;
-    }
+//    public boolean isRevealed() {
+//        return isRevealed;
+//    }
+//
+//    public boolean isFlagged() {
+//        return isFlagged;
+//    }
 
     public boolean isABomb() {
         return isABomb;
     }
 
-    public int getNumberOfNeighbouringMines() {
-        return numberOfNeighbouringMines;
-    }
+//    public int getNumberOfNeighbouringMines() {
+//        return numberOfNeighbouringMines;
+//    }
 
     @Override
     public String toString() {

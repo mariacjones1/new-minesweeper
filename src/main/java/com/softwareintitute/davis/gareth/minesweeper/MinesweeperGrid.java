@@ -11,7 +11,7 @@ public class MinesweeperGrid {
     private int numberOfMines;
     private int numberOfRevealedSquares = 0;
     public boolean runGame = true;
-    public boolean winner;
+    public boolean winner = true;
 
     public MinesweeperGrid(int length,int width, int numberOfMines){
         this.length = length;
@@ -48,7 +48,6 @@ public class MinesweeperGrid {
     }
 
     private void calculateNeighbours(){
-
         for(int i = 0; i <this.length ; i++) {
             for (int j = 0; j < this.width; j++) {
                 for (int x = i - 1; x <= i + 1; x++) {
