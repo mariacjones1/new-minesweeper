@@ -100,6 +100,13 @@ public class MinesweeperGrid {
     }
 
     public String winGame(){
+        for(int i = 0; i <this.length ; i++) {
+            for (int j = 0; j < this.width; j++) {
+                if (board[i][j].isABomb()){
+                    board[i][j].flagTile();
+                }
+            }
+        }
         runGame = false;
         winner = true;
         return this.toString();

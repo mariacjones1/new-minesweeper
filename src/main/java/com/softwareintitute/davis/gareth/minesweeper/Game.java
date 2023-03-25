@@ -7,7 +7,7 @@ public class Game {
 
 
 
-    public void takeTurn(){
+    public void takeTurn(Object grid){
 
     }
 }
