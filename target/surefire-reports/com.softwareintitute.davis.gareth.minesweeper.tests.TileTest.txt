@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.softwareintitute.davis.gareth.minesweeper.tests.TileTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s - in com.softwareintitute.davis.gareth.minesweeper.tests.TileTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 s - in com.softwareintitute.davis.gareth.minesweeper.tests.TileTest
