@@ -8,9 +8,9 @@ public class Game {
     private int width = 10;
     private int numberOfMines = 10;
     MinesweeperGrid myGrid = new MinesweeperGrid(length, width, numberOfMines);
-    private int xCord;
-    private int yCord;
-    private String selection;
+//    private int xCord;
+//    private int yCord;
+//    private String selection;
     public boolean winner;
 
     public void chooseDifficulty() {
@@ -36,11 +36,11 @@ public class Game {
         while (myGrid.runGame) {
             scanner.nextLine();
             System.out.println("Do you want to reveal the square (R) or set a flag (F)?");
-            selection = scanner.nextLine().toUpperCase();
+            String selection = scanner.nextLine().toUpperCase();
             System.out.println("Please enter X coordinate:");
-            xCord = scanner.nextInt();
+            int xCord = scanner.nextInt();
             System.out.println("Please enter Y coordinate:");
-            yCord = scanner.nextInt();
+            int yCord = scanner.nextInt();
             if (selection.equals("R") || selection.equals("F")){
                 if (xCord < 0 || xCord >= length || yCord < 0 || yCord >= width){
                     System.out.println("Coordinate out of bounds, please try again.");
@@ -54,7 +54,7 @@ public class Game {
             }
 
         }
-        if (myGrid.winner == true) {
+        if (myGrid.winner) {
             winner = true;
         } else {
             winner = false;

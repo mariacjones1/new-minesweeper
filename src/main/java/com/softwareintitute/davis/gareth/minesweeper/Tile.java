@@ -30,14 +30,11 @@ public class Tile {
         }
     }
 
-
     public void setABomb(boolean ABomb) {
         isABomb = ABomb;
     }
 
-//    public void setNumberOfNeighbouringMines(int numberOfNeighbouringMines) {
-//        this.numberOfNeighbouringMines = numberOfNeighbouringMines;
-//    }
+
     public void increaseNeighbour(){
         numberOfNeighbouringMines++;
      }
