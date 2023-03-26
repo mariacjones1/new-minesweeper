@@ -1,6 +1,5 @@
 package com.softwareintitute.davis.gareth.minesweeper;
 
-
 import java.util.Scanner;
 
 public class Main {
@@ -36,7 +35,6 @@ public class Main {
                 scanner.nextLine();
             }
         }
-
         MinesweeperGrid myGrid = new MinesweeperGrid(length, width, numberOfMines);
         System.out.println(myGrid);
         while (myGrid.runGame){
