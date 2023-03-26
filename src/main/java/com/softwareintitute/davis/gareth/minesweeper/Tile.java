@@ -41,21 +41,11 @@ public class Tile {
     public void increaseNeighbour(){
         numberOfNeighbouringMines++;
      }
-//    public boolean isRevealed() {
-//        return isRevealed;
-//    }
-//
-//    public boolean isFlagged() {
-//        return isFlagged;
-//    }
 
     public boolean isABomb() {
         return isABomb;
     }
 
-//    public int getNumberOfNeighbouringMines() {
-//        return numberOfNeighbouringMines;
-//    }
 
     @Override
     public String toString() {

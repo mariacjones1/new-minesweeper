@@ -32,7 +32,6 @@ public class MinesweeperGrid {
     }
 
     private void placeMines(){
-        //check less mines than squares of grid are requested
         int bombsPlaced = 0;
         Random randomNumber = new Random();
         int currentX;
